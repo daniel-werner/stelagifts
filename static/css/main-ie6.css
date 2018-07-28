@@ -1,0 +1,153 @@
+a.order-button{
+	/* IE */
+	background: url("../img/ie6/order-button-ie6.png") no-repeat scroll left top;
+	margin: 20px;
+}
+
+a.paging-prev {
+	background: url("../img/ie6/paging-left-arrow-ie6.png") no-repeat scroll center center;	
+}
+
+a.paging-next {
+	background: url("../img/ie6/paging-right-arrow-ie6.png") no-repeat scroll center center;	
+}
+
+a.paging-first{
+	background: url("../img/ie6/paging-left-arrow-ie6.png") no-repeat scroll 6px center;
+}
+
+a.paging-last{
+	background: url("../img/ie6/paging-right-arrow-ie6.png") no-repeat scroll 40px center;	
+}
+
+.sidebar li {
+	padding: 0px;	
+}
+
+.pager-left-green {
+	background: url("../img/ie6/pager-left-green-ie6.png") no-repeat scroll right top;	
+}
+
+.pager-right-green {
+	background: url("../img/ie6/pager-right-green-ie6.png") no-repeat scroll right top;	
+}
+
+.pager-left-grey {
+	background: url("../img/ie6/pager-left-grey-ie6.png") no-repeat scroll right top;	
+}
+
+.pager-right-grey {
+	background: url("../img/ie6/pager-right-grey-ie6.png") no-repeat scroll right top;	
+}
+
+.pager-left-green a {
+	background: url("../img/ie6/arrow-left-green-ie6.png") no-repeat scroll center center;	
+}
+
+.pager-right-green a {
+	background: url("../img/ie6/arrow-right-green-ie6.png") no-repeat scroll center center;	
+}
+
+.pager-left-grey a {
+	background: url("../img/ie6/arrow-left-grey-ie6.png") no-repeat scroll center center;	
+}
+
+.pager-right-grey a {
+	background: url("../img/ie6/arrow-right-grey-ie6.png") no-repeat scroll center center;	
+}
+
+a.order-now-green {
+	background: url("../img/ie6/order-now-green-ie6.png") no-repeat scroll center center;	
+}
+
+div.tabs-left
+{
+	margin: 0;
+}
+
+div.product-details-container {
+	padding: 0px;
+	position:relative;
+}
+
+div.tabs-right 
+{
+	clear: both;
+	float:right;
+	display:inline;
+	right: 0px;
+	padding: 0;
+	width: 370px !important;
+	margin: 0px;
+}
+
+.product-thumbs-grey ul,
+.product-thumbs-green ul {
+	position: absolute;
+	left: 0px;	
+}
+
+div.tab-content-left {
+	height: 155px;
+	min-height: 155px;
+}
+
+div.tab-content-right {
+	height: 155px;
+	min-height: 155px;
+}
+
+div.product-box-list-item {
+	margin: 20px 0 0px 20px;
+}
+
+.details p {
+	padding: 10px 10px;
+	text-align: left;
+	font-size: 17px;
+	color: #000000;
+}
+
+span.math {
+	/* IE */
+	left: 0;
+
+}
+
+p {
+	/* IE */
+	padding: 0px 0px 0 0px;
+	margin: 0;
+}
+
+/* IE 6 */
+
+a.pulsart-logo{
+	background: url("../img/ie6/pulsart-ie6.png" ) no-repeat;
+}
+/* IE 6 */
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16 {
+	display: inline;
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+div.product-box {
+	background:  url("../img/ie6/box-background.gif") no-repeat scroll left top;
+}

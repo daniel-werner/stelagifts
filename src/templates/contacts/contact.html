@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block pagetitle %}
+	{{flatpage.title}}
+{% endblock %}
+
+{% block body %}
+<body>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+<div class="flatpage container_16 shadow">
+	{% block breadcrumb %}		
+		{% include "breadcrumbs.html" %}
+	{% endblock %}	
+
+	{% include "messages.html" %}
+
+	<div class="flatpage-content">
+		{{ flatpage.content|safe }}
+
+		<form id="contact-form" action="{% url contact.views.contact %}" method="post">
+			{{ form.as_p }}
+			<p><label>&nbsp;</label><input type="submit" value="{% trans "Send" %}" /></p>
+		</form>
+	
+	</div>	
+</div>
+{% endblock %}

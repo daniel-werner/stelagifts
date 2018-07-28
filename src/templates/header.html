@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load localeurl_tags %}
+
+<div id="header" class="container_16">
+  <div id="logo-header" class="grid_4">
+    <a href="#">
+      <img src="{{ MEDIA_URL }}img/logo.png" alt="Stelagifts logo"/>
+    </a>
+  </div>
+  <div id="menu-lang-top">
+    <div id="menu-top" class="grid_7">
+      <ul class="menu-top-list">
+      	{% url views.index as home_url %}
+      	{% url products.views.index as products_url %}
+      	{% url multilingual.flatpages.views.multilingual_flatpage url="about/" as about_url %}
+      	{% url multilingual.flatpages.views.multilingual_flatpage url="contact/" as contact_url %}      	
+        <li {% ifequal request.path home_url %}class="active"{%endifequal%}><a href="{{home_url}}">{% trans "Home" %}</a></li>
+        <li {% ifequal request.path products_url %}class="active"{%endifequal%}><a href="{{products_url}}">{% trans "Products" %}</a></li>
+        <li {% ifequal request.path about_url %}class="active"{%endifequal%}><a href="{{about_url}}">{% trans "About" %}</a></li>
+        <li {% ifequal request.path contact_url %}class="active"{%endifequal%}><a href="{{contact_url}}">{% trans "Contact Us" %}</a></li>
+      </ul>
+    </div>
+    <div id="language-selector" class="grid_3">
+      <span>Language:</span>
+
+		<ul class="language-selector">
+	        {% for lang in LANGUAGES %}
+	        	<li>
+	        		{% ifequal lang.0 LANGUAGE_CODE %}
+		        		<span class="language lang-{{lang.0}}"></span>
+	       			{% else %}
+	    	    		<a class="language lang-{{lang.0}}" href="{{ request.path|chlocale:lang.0 }}"></a>
+	    	    	{% endifequal %}
+	    	    </li>
+	        {% endfor %}				
+		</ul>
+    </div>
+  </div>
+</div>

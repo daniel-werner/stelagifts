@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block pagetitle %}
+	{% trans "Error" %}
+{% endblock %}
+
+{% block body %}
+<body>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+<div id="error" class="flatpage container_16 shadow">
+	<h1>{% trans "Internal sever error!" %}</h1>
+</div>
+{% endblock %}
+

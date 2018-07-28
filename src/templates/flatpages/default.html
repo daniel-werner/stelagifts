@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block pagetitle %}
+	{{flatpage.title}}
+{% endblock %}
+
+{% block body %}
+<body>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+<div class="flatpage container_16 shadow">
+	{% block breadcrumb %}		
+		{% include "breadcrumbs.html" %}
+	{% endblock %}	
+
+	{% include "sidebar.html" %}
+	
+	<div class="flatpage-content-narrow">
+		{{ flatpage.content }}
+	</div>
+	<div class="clear"></div>
+		
+</div>
+{% endblock %}

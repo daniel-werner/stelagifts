@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block pagetitle %}
+	{% trans "Products" %}
+{% endblock %}
+{% block body %}
+<body>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+<div class="product-list container_16 shadow">
+	{% block breadcrumb %}		
+		{% include "breadcrumbs.html" %}
+	{% endblock %}	
+	{% block product_list_head %}
+	<div class="product-list-head">
+		<div class="product-list-desc grid_9">
+			<h1>{% trans "Our products" %}</h1>
+			<p>{% trans "Choose from the cell phone cases or other gifts, place your order and your customized handcrafted gift will be done soon!" %}</p>
+		</div>
+		<div id="category-select" class="grid_6 omega">
+			<a class="facebook-small" href="http://www.facebook.com/stelagifts" target="_blank"></a>
+			<div class="clear"></div>
+			<!--<p class="omega">Categories:</p>-->
+			<select class="omega">
+				<option>{% trans "Cell phone cases" %}</option>
+			</select>
+		</div>
+		<hr class="main"/>
+	</div>
+	{% endblock %}
+	{% load thumbnail %}
+	{% for product in products.object_list %}
+		<div class="{% if forloop.counter0|divisibleby:"3"%}product-list-alpha{% endif %} product-box-list-item">
+			<h2 class="product-name">
+				<a href="{% url products.views.details product.id product.name|slugify %}" >				
+					{{product.name}}
+				</a>
+			</h2>
+			<a href="{% url products.views.details product.id product.name|slugify %}" >
+				{% thumbnail product.get_default_image "260x235" as im %}
+					<span class="product-img"><img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" alt="" style="margin-top: -{% widthratio im.height 2 1 %}px;"/></span>
+				{% endthumbnail %}
+			</a>
+			{% if forloop.counter|divisibleby:"3"%}
+				<div class="clear"></div>	
+			{% endif %}
+		</div>	
+	{% endfor %}
+	<div class="clear"></div>
+
+	<div class="paging grid_10 prefix_5">
+		{% if products.number != 1 %}
+			<a class="paging-first" href="?page=1">{% trans "First" %}</a>
+		{% else %}
+			<span class="paging-first">{% trans "First" %}</span>
+		{% endif %}
+				
+		{% if products.has_previous %}
+			<a class="paging-prev" href="?page={{ products.previous_page_number }}"></a>
+		{% else %}
+			<span class="paging-prev"></span>
+		{% endif %}
+
+		{% if products.number > 2 %}
+			<a href="?page=1">1</a>
+			<span>...</span>
+		{% endif %}
+
+		{% if products.has_previous %}
+			<a href="?page={{ products.previous_page_number }}">{{ products.previous_page_number }}</a>
+		{% endif %}
+		
+		<span class="paging-current">{{ products.number }}</span>
+		{% if products.has_next %}
+			<a href="?page={{ products.next_page_number }}">{{ products.next_page_number }}</a>
+		{% endif %}	
+
+		{% if products.next_page_number|add:1 <= products.paginator.num_pages %}
+			<span>...</span>
+			<a href="?page={{ products.paginator.num_pages }}">{{products.paginator.num_pages}}</a>
+		{% endif %}
+					
+		{% if products.has_next %}
+			<a class="paging-next" href="?page={{ products.next_page_number }}"></a>
+		{% else %}
+			<span class="paging-next"></span>		
+		{% endif %}
+		
+		{% if products.number != products.paginator.num_pages %}
+			<a class="paging-last" href="?page={{ products.paginator.num_pages }}">{% trans "Last" %}</a>
+		{% else %}
+			<span class="paging-last">{% trans "Last" %}</span>
+		{% endif %}
+	</div>	
+
+	<div class="clear"></div>		
+</div>
+{% endblock %}

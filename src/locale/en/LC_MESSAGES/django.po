@@ -1,0 +1,633 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-19 20:59+0100\n"
+"PO-Revision-Date: 2011-01-20 20:50+0100\n"
+"Last-Translator: Daniel Verner <vernerd.reg@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin_tools/dashboard/dashboards.py:81
+#: admin_tools/menu/menus.py:100
+msgid "Dashboard"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:217
+msgid "Quick links"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:223
+msgid "Return to site"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:224
+#: admin_tools/theming/templates/admin/base.html:43
+msgid "Change password"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:226
+#: admin_tools/theming/templates/admin/base.html:50
+msgid "Log out"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:232
+#: admin_tools/dashboard/modules.py:385
+#: admin_tools/menu/menus.py:103
+msgid "Applications"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:238
+#: admin_tools/menu/menus.py:107
+msgid "Administration"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:243
+#: admin_tools/dashboard/dashboards.py:297
+#: admin_tools/dashboard/modules.py:534
+msgid "Recent Actions"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:247
+msgid "Latest Django News"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:254
+msgid "Support"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:257
+msgid "Django documentation"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:262
+msgid "Django \"django-users\" mailing list"
+msgstr ""
+
+#: admin_tools/dashboard/dashboards.py:267
+msgid "Django irc channel"
+msgstr ""
+
+#: admin_tools/dashboard/modules.py:314
+msgid "Links"
+msgstr ""
+
+#: admin_tools/dashboard/modules.py:585
+msgid "No recent actions."
+msgstr ""
+
+#: admin_tools/dashboard/modules.py:631
+msgid "RSS Feed"
+msgstr ""
+
+#: admin_tools/dashboard/templates/admin/app_index.html:9
+#: admin_tools/theming/templates/admin/base.html:57
+#: breadcrumbs/breadcrumbs.py:84
+#: multilingual/templates/admin/multilingual/change_form.html:64
+#: templates/footer.html:7
+#: templates/header.html:17
+#: templates/index.html:4
+msgid "Home"
+msgstr ""
+
+#: admin_tools/dashboard/templates/admin/app_index.html:11
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: admin_tools/dashboard/templates/admin_tools/dashboard/dashboard.html:55
+msgid "Modules"
+msgstr ""
+
+#: admin_tools/dashboard/templates/admin_tools/dashboard/modules/app_list.html:13
+#: admin_tools/dashboard/templates/admin_tools/dashboard/modules/model_list.html:11
+#: multilingual/templates/admin/multilingual/change_form.html:67
+msgid "Add"
+msgstr ""
+
+#: admin_tools/dashboard/templates/admin_tools/dashboard/modules/app_list.html:14
+#: admin_tools/dashboard/templates/admin_tools/dashboard/modules/model_list.html:12
+msgid "Change"
+msgstr ""
+
+#: admin_tools/menu/items.py:328
+msgid "Bookmarks"
+msgstr ""
+
+#: admin_tools/menu/templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr ""
+
+#: admin_tools/menu/templates/admin/base_site.html:16
+msgid "Django administration"
+msgstr ""
+
+#: admin_tools/menu/templates/admin_tools/menu/menu.html:32
+msgid "Please enter a name for the bookmark"
+msgstr ""
+
+#: admin_tools/theming/templates/admin/base.html:30
+msgid "Welcome,"
+msgstr ""
+
+#: admin_tools/theming/templates/admin/base.html:35
+msgid "Documentation"
+msgstr ""
+
+#: captcha/fields.py:56
+msgid "Play captcha as audio file"
+msgstr ""
+
+#: captcha/fields.py:71
+#: captcha/fields.py:96
+#: captcha/tests/__init__.py:70
+msgid "Invalid CAPTCHA"
+msgstr ""
+
+#: captcha/tests/__init__.py:97
+msgid "This field is required."
+msgstr ""
+
+#: contact/models.py:5
+msgid "Name"
+msgstr ""
+
+#: contact/models.py:6
+msgid "Email"
+msgstr ""
+
+#: contact/models.py:7
+msgid "Subject"
+msgstr ""
+
+#: contact/models.py:8
+msgid "Message"
+msgstr ""
+
+#: contact/models.py:15
+msgid "Read"
+msgstr ""
+
+#: contact/models.py:17
+msgid "Unread"
+msgstr ""
+
+#: contact/views.py:23
+msgid "Your message has been sent. Thank you for interesting to our products. Our crew will contact you soon."
+msgstr ""
+
+#: contact/forms/contactform.py:16
+msgid "Security code"
+msgstr ""
+
+#: multilingual/admin.py:232
+#: multilingual/templates/admin/multilingual/change_form.html:82
+msgid "language"
+msgstr ""
+
+#: multilingual/admin.py:237
+msgid "and"
+msgstr ""
+
+#: multilingual/admin.py:239
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#: multilingual/admin.py:374
+#, python-format
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr ""
+
+#: multilingual/admin.py:375
+msgid "You may edit it again below."
+msgstr ""
+
+#: multilingual/flatpages/admin.py:10
+#: multilingual/flatpages/models.py:11
+msgid "URL"
+msgstr ""
+
+#: multilingual/flatpages/admin.py:11
+msgid "Example: '/about/contact/'. Make sure to have leading and trailing slashes."
+msgstr ""
+
+#: multilingual/flatpages/admin.py:13
+msgid "This value must contain only letters, numbers, underscores, dashes or slashes."
+msgstr ""
+
+#: multilingual/flatpages/admin.py:24
+msgid "Advanced options"
+msgstr ""
+
+#: multilingual/flatpages/models.py:12
+msgid "enable comments"
+msgstr ""
+
+#: multilingual/flatpages/models.py:13
+msgid "template name"
+msgstr ""
+
+#: multilingual/flatpages/models.py:14
+msgid "Example: 'flatpages/contact_page.html'. If this isn't provided, the system will use 'flatpages/default.html'."
+msgstr ""
+
+#: multilingual/flatpages/models.py:15
+msgid "registration required"
+msgstr ""
+
+#: multilingual/flatpages/models.py:15
+msgid "If this is checked, only logged-in users will be able to view the page."
+msgstr ""
+
+#: multilingual/flatpages/models.py:34
+msgid "title"
+msgstr ""
+
+#: multilingual/flatpages/models.py:35
+msgid "content"
+msgstr ""
+
+#: multilingual/flatpages/models.py:39
+msgid "multilingual flat page"
+msgstr ""
+
+#: multilingual/flatpages/models.py:40
+msgid "multilingual flat pages"
+msgstr ""
+
+#: multilingual/templates/admin/multilingual/edit_inline/tabular.html:15
+msgid "Delete?"
+msgstr ""
+
+#: multilingual/templates/admin/multilingual/edit_inline/tabular.html:28
+msgid "View on site"
+msgstr ""
+
+#: multilingual/templates/admin/multilingual/edit_inline/tabular.html:112
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: multilingual/templates/admin/multilingual/edit_inline/tabular.html:115
+msgid "Remove"
+msgstr ""
+
+#: products/views.py:15
+#: products/views.py:39
+#: templates/footer.html:8
+#: templates/header.html:18
+#: templates/sidebar.html:6
+#: templates/products/list.html:4
+msgid "Products"
+msgstr ""
+
+#: products/views.py:65
+msgid "Tags"
+msgstr ""
+
+#: sorl/thumbnail/admin.py:43
+msgid "Clear image"
+msgstr ""
+
+#: sorl/thumbnail/fields.py:60
+msgid "Upload a valid image. The file you uploaded was either not an image or a corrupted image."
+msgstr ""
+
+#: tagging/fields.py:69
+#, python-format
+msgid "%s can only be set on instances."
+msgstr ""
+
+#: tagging/forms.py:19
+msgid "Multiple tags were given."
+msgstr ""
+
+#: tagging/forms.py:22
+#, python-format
+msgid "A tag may be no more than %s characters long."
+msgstr ""
+
+#: tagging/forms.py:38
+#, python-format
+msgid "Each tag may be no more than %s characters long."
+msgstr ""
+
+#: tagging/models.py:58
+#, python-format
+msgid "No tags were given: \"%s\"."
+msgstr ""
+
+#: tagging/models.py:60
+#, python-format
+msgid "Multiple tags were given: \"%s\"."
+msgstr ""
+
+#: tagging/models.py:460
+msgid "name"
+msgstr ""
+
+#: tagging/models.py:466
+#: tagging/models.py:476
+msgid "tag"
+msgstr ""
+
+#: tagging/models.py:467
+msgid "tags"
+msgstr ""
+
+#: tagging/models.py:477
+msgid "content type"
+msgstr ""
+
+#: tagging/models.py:478
+msgid "object id"
+msgstr ""
+
+#: tagging/models.py:486
+msgid "tagged item"
+msgstr ""
+
+#: tagging/models.py:487
+msgid "tagged items"
+msgstr ""
+
+#: tagging/utils.py:189
+msgid "If a list or tuple of tags is provided, they must all be tag names, Tag objects or Tag ids."
+msgstr ""
+
+#: tagging/utils.py:191
+msgid "The tag input given was invalid."
+msgstr ""
+
+#: tagging/utils.py:236
+#, python-format
+msgid "Invalid distribution algorithm specified: %s."
+msgstr ""
+
+#: tagging/views.py:33
+msgid "tagged_object_list must be called with a queryset or a model."
+msgstr ""
+
+#: tagging/views.py:39
+msgid "tagged_object_list must be called with a tag."
+msgstr ""
+
+#: tagging/views.py:43
+#, python-format
+msgid "No Tag found matching \"%s\"."
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:19
+#, python-format
+msgid "tags_for_model tag was given an invalid model: %s"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:32
+#, python-format
+msgid "tag_cloud_for_model tag was given an invalid model: %s"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:56
+#, python-format
+msgid "tagged_objects tag was given an invalid model: %s"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:89
+#, python-format
+msgid "%s tag requires either three or five arguments"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:91
+#: tagging/templatetags/tagging_tags.py:143
+#: tagging/templatetags/tagging_tags.py:198
+#, python-format
+msgid "second argument to %s tag must be 'as'"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:94
+#: tagging/templatetags/tagging_tags.py:147
+#, python-format
+msgid "if given, fourth argument to %s tag must be 'with'"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:96
+#, python-format
+msgid "if given, fifth argument to %s tag must be 'counts'"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:141
+#, python-format
+msgid "%s tag requires either three or between five and seven arguments"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:155
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:164
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid choice: '%(value)s'"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:170
+#, python-format
+msgid "%(tag)s tag was given an invalid option: '%(option)s'"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:175
+#, python-format
+msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:196
+#, python-format
+msgid "%s tag requires exactly three arguments"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:221
+#, python-format
+msgid "%s tag requires exactly five arguments"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:223
+#, python-format
+msgid "second argument to %s tag must be 'in'"
+msgstr ""
+
+#: tagging/templatetags/tagging_tags.py:225
+#, python-format
+msgid "fourth argument to %s tag must be 'as'"
+msgstr ""
+
+#: templates/404.html:4
+#: templates/500.html:4
+msgid "Error"
+msgstr ""
+
+#: templates/404.html:16
+msgid "Page not found!"
+msgstr ""
+
+#: templates/500.html:16
+msgid "Internal sever error!"
+msgstr ""
+
+#: templates/banner.html:7
+msgid "Get Your Favourite Handcrafted Gifts"
+msgstr ""
+
+#: templates/banner.html:8
+msgid "Choose from the cell phone cases or other gifts, place your order and your customized handcrafted gift will be done soon."
+msgstr ""
+
+#: templates/banner.html:11
+#: templates/products/details.html:76
+msgid "Order now"
+msgstr ""
+
+#: templates/footer.html:4
+#: templates/footer.html.py:16
+msgid "code handcrafted by:"
+msgstr ""
+
+#: templates/footer.html:4
+#: templates/footer.html.py:16
+msgid "Daniel Verner"
+msgstr ""
+
+#: templates/footer.html:9
+#: templates/header.html:19
+msgid "About"
+msgstr ""
+
+#: templates/footer.html:10
+#: templates/header.html:20
+msgid "Contact Us"
+msgstr ""
+
+#: templates/footer.html:12
+msgid "All Rights Reserved"
+msgstr ""
+
+#: templates/footer.html:13
+msgid "designed by:"
+msgstr ""
+
+#: templates/index.html:11
+msgid "Dress Up Your Phone!"
+msgstr ""
+
+#: templates/index.html:15
+msgid "Have an ordinary phone"
+msgstr ""
+
+#: templates/index.html:17
+msgid "Cell phone, ipod, laptop, smart phone or anything else!"
+msgstr "Cell phone, iPod, laptop, smart phone or anything else!"
+
+#: templates/index.html:23
+msgid "You want  something special?"
+msgstr ""
+
+#: templates/index.html:27
+msgid "Just design your unique cell phone case or anything else, and we will make it!"
+msgstr "Just design your unique cell phone case, and we will make it!"
+
+#: templates/index.html:33
+msgid "Perfect Gifts"
+msgstr ""
+
+#: templates/index.html:37
+msgid "Find your favourite gift, and surprise your friends..."
+msgstr ""
+
+#: templates/index.html:43
+msgid "Stela Handcrafted Gifts"
+msgstr ""
+
+#: templates/index.html:44
+msgid "Only handcrafted and unique designed cell phone cases are waiting for you. There are perfect presents for birthdays anniversary, Christmas, Easter, Valentines Day... Suprise your friends and family or get one to yourself!"
+msgstr "Only handcrafted and unique designed cell phone cases are waiting for you. There are perfect presents for birthdays, anniversary, Christmas, Easter, Valentines Day... Surprise your friends and family or get one to yourself!"
+
+#: templates/contacts/contact.html:27
+msgid "Send"
+msgstr ""
+
+#: templates/products/details.html:54
+msgid "Available sizes:"
+msgstr "Available sizes"
+
+#: templates/products/details.html:59
+msgid "Inner size:"
+msgstr ""
+
+#: templates/products/details.html:64
+msgid "Materials:"
+msgstr ""
+
+#: templates/products/details.html:69
+msgid "Price:"
+msgstr ""
+
+#: templates/products/details.html:73
+msgid "In stock:"
+msgstr ""
+
+#: templates/products/details.html:73
+msgid "Yes"
+msgstr ""
+
+#: templates/products/details.html:73
+msgid "No"
+msgstr ""
+
+#: templates/products/details.html:112
+msgid "Related products"
+msgstr ""
+
+#: templates/products/details.html:146
+msgid "Related devices"
+msgstr ""
+
+#: templates/products/list.html:21
+msgid "Our products"
+msgstr ""
+
+#: templates/products/list.html:22
+msgid "Choose from the cell phone cases or other gifts, place your order and your customized handcrafted gift will be done soon!"
+msgstr ""
+
+#: templates/products/list.html:29
+#: templates/products/tag_list.html:18
+msgid "Cell phone cases"
+msgstr ""
+
+#: templates/products/list.html:57
+#: templates/products/list.html.py:59
+msgid "First"
+msgstr ""
+
+#: templates/products/list.html:94
+#: templates/products/list.html.py:96
+msgid "Last"
+msgstr ""
+
+#: templates/products/tag_list.html:10
+msgid "Available products for"
+msgstr ""
+
+#: templates/products/tag_list.html:11
+#, python-format
+msgid "You can find here products which are available for your %(tag)s"
+msgstr ""
+

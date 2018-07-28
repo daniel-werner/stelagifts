@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block pagetitle %}
+	{% trans "Home" %}
+{% endblock %}
+{% block breadcrumb %}		
+{% endblock %}
+
+{% block content %}
+    <div id="content-main" class="container_16">
+      <h1 class="dark grid_10">{% trans "Dress Up Your Phone!" %}</h1>
+      <div class="clear"></div>
+      <div class="product-list">
+        <div class="first product-box-main">
+          <h3>{% trans "Have an ordinary phone" %}</h3>
+          <img src="{{ MEDIA_URL }}img/iphone.png" alt="phone"/>
+          <p class="center">{% trans "Cell phone, ipod, laptop, smart phone or anything else!" %}</p>
+        </div>
+        <div class="math">
+          <span class="math">+</span>
+        </div>
+        <div class="product-box-main">
+          <h3>{% trans "You want  something special?" %}</h3>
+          <a href="{% url multilingual.flatpages.views.multilingual_flatpage url="contact" %}">
+          	<img src="{{ MEDIA_URL }}img/special.png" alt="phone"/>
+          </a>
+          <p class="center">{% trans "Just design your unique cell phone case or anything else, and we will make it!" %}</p> 
+        </div>
+        <div class="math">
+          <span class="math">=</span>
+        </div>
+        <div class="last product-box-main">
+          <h3>{% trans "Perfect Gifts" %}</h3>
+          <a href="{% url products.views.index %}">
+          	<img src="{{ MEDIA_URL }}img/gift.png" alt="phone"/>
+          </a>
+          <p class="center">{% trans "Find your favourite gift, and surprise your friends..." %}</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <hr class="main" />
+      <div class="grid_10">
+      <h2 class="grid_10">{% trans "Stela Handcrafted Gifts" %}</h2>
+      <p class="grid_10">{% trans "Only handcrafted and unique designed cell phone cases are waiting for you. There are perfect presents for birthdays anniversary, Christmas, Easter, Valentines Day... Suprise your friends and family or get one to yourself!" %}</p>
+      <!--Kizárólag kézi kidolgozású, egyedi tervezésu mobiltokok, és meglepetés termékek várnak rád. Ideális ajándékok ünnepekre, születésnapokra... lepd meg te is azokat akik közel állnak hozzád vagy szerezz be egyet magadnak!-->
+      </div>
+      <div class="prefix_1 grid_5 omega">
+        <a href="http://www.facebook.com/stelagifts" target="_blank">
+          <img src="{{ MEDIA_URL }}img/facebook.png" alt="facebook"/>
+        </a>
+      </div>
+    </div>
+{% endblock %}

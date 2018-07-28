@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load thumbnail %}
+{% block pagetitle %}
+	{{product.name}}
+{% endblock %}
+
+{% block links-scripts %}
+
+	    <script src="{{ MEDIA_URL }}/js/jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>
+	{% if 0 %}
+	    <script src="{{ MEDIA_URL }}/js/jquery.carouFredSel-3.0.3-packed.js" type="text/javascript" charset="utf-8"></script>
+    {% endif %}
+
+	{% load assets %}
+	{% assets filter="jsmin", output="js/packed.js", "js/jquery.carouFredSel-3.0.3-packed.js" %}
+    	<script type="text/javascript" src="{{ ASSET_URL }}" charset="utf-8"></script>
+	{% endassets %}
+    
+{% endblock %}
+
+{% block body %}
+<body>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block content %}
+
+<div class="product-details-container container_16 shadow">
+	{% block breadcrumb %}		
+		{% include "breadcrumbs.html" %}
+	{% endblock %}
+	<div class="details container_16">
+		<div id="product-box-large" class="product-box-large">
+			{% if productImages %}
+				{% thumbnail productImages|first "450x340" as im %}
+					<img id="product-image-large" src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" alt="" style="margin-top: -{% widthratio im.height 2 1 %}px;"/>
+				{% endthumbnail %}	
+			{% endif %}
+
+		</div>
+		<div class="grid_8 details-text">
+			<h1>
+				{{product.name}}
+			</h1>
+			<div class="line150">
+				{{product.description|safe}}			
+			</div>
+
+			{% if productSizes|length > 0 %}
+				<p>
+					<strong>{% trans "Available sizes:" %}</strong>
+				</p>
+			{% endif %}
+			{% for size in productSizes %}		
+				<p>
+					<strong>{% trans "Inner size:" %} </strong>{{size.width}} x {{size.height}} cm <!--2.36x4.72 in-->
+				</p>					
+			{% endfor %}
+			<p>
+				{% if product.material %}
+					<strong>{% trans "Materials:" %} </strong>{{product.material}}
+				{% endif %}	
+			</p>
+			{% if product.price %}
+			<p class="price grid_7 alpha">
+				{% trans "Price:" %} {{product.price|floatformat}} Eur
+			</p>
+			{% endif %}
+			<p class="stock grid_7 alpha">
+				{% trans "In stock:" %} {% if product.stock == 1 %}{% trans "Yes" %}{% else %}{% trans "No" %}{% endif %}
+			</p>			
+			<!--
+			<a class="facebook-tiny grid_1" href="http://www.facebook.com/#!/profile.php?id=100001701055234" target="_blank"></a>-->
+			<a class="order-now-green" rel="nofollow" href="{% url contact.views.contact product_id=product.id %}">{% trans "Order now" %}</a>
+		</div>		
+		<!--<div class="clear"></div>-->
+		<div id="product-thumbs-green" class="product-thumbs-green {% if productImages|length == 0 %}hide{% endif %}">
+			<span class="pager-left-green {% if productImages|length <= 3 %}transparent{% endif %}">
+				<a id="pager-left-green" href="#"></a>
+			</span>
+
+			{% if productImages %}
+			<div id="carousel-green">
+				<ul id="product-list-green">
+					{% for image in productImages %}
+						<li>
+							<div>
+								{% thumbnail image "450x340" as im %}
+								<a href="{{im.url}}" rel="{{im.width}}x{{im.height}}">
+								{% endthumbnail %}	
+								{% thumbnail image "110x80" as im %}
+									<img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" alt=""/>
+								{% endthumbnail %}
+								</a>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
+			<span class="pager-right-green {% if productImages|length <= 3 %}transparent{% endif %}">
+				<a id="pager-right-green" href="#"></a>
+			</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="tabs-left grid_9 alpha omega">
+		<ul class="grid_9 tabs-left">
+			<li class="tabs-left">
+				{% trans "Related products" %}
+			</li>
+		</ul>
+		<div class="clear"></div>
+		<div class="tab-content-left" >
+			{% if relatedProducts %}				
+				<div id="product-thumbs-grey" class="product-thumbs-grey">
+					<span class="pager-left-grey {% if relatedProducts|length <= 5 %}transparent{% endif %}">
+						<a id="pager-left-grey" href="#"></a>
+					</span>
+						<div id="carousel-grey">
+		      				<ul id="product-list-grey">
+		      					{% for related in relatedProducts %}
+			      					<li>
+			      						<div>
+			      							<a href="{% url products.views.details related.id related.name|slugify %}">
+			      								{% thumbnail related.get_default_image "95x68" as im %}
+			      									<img src="{{im.url}}" width="{{im.width}}" height="{{im.height}}" title="{{related.name}}" alt="{{related.name}}" style="margin-top: -{% widthratio im.height 2 1 %}px;"/>
+			      								{% endthumbnail %}
+			      							</a>
+			      						</div>
+			      					</li>
+		      					{% endfor %}
+		      				</ul>
+						</div>
+					<span class="pager-right-grey {% if relatedProducts|length <= 5 %}transparent{% endif %}">
+						<a id="pager-right-grey" href="#"></a>
+					</span>			
+				</div>
+			{% endif %}			
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="tabs-right grid_4 alpha omega">
+		<ul class="grid_4 tabs-right">
+			<li class="tabs-right">
+				{% trans "Related devices" %}
+			</li>
+		</ul>
+		<div class="clear"></div>
+		<div id="tagcloud" class="tab-content-right">
+			{% if relatedDevices|length > 0 %}
+				<ul>
+					{% for related in relatedDevices %}
+					<li>
+						<a href="{% url products.views.tags related.id related.name|slugify %}">{{related}}</a>		
+					</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+
+	
+</div>
+
+<script type="text/javascript">
+ $(document).ready(function() {
+	$("#product-list-green").carouFredSel({
+		width: 380,
+		height: 90,
+		items : { visible : 3,
+				  width: 110 },
+		scroll: 1,
+		auto: false,
+		prev : "#pager-left-green",
+		next : "#pager-right-green"
+	});
+	
+	$("#product-list-grey").carouFredSel({
+		width: 550,
+		height: 90,
+		items : { visible : 5,
+				  width: 95 },
+		scroll: 1,
+		auto: false,
+		prev : "#pager-left-grey",
+		next : "#pager-right-grey"
+	});
+	
+	$("a", "#product-list-green").click( function() {
+		var productImage = $("#product-image-large");
+		var container = $('#product-box-large');
+		var dimensions = this.rel.split("x");
+		container.addClass('loading');
+		productImage.attr( "width", dimensions[0] );
+		productImage.attr( "height", dimensions[1] );
+		productImage.attr( "style", "display: none; margin-top:-" + Math.round(dimensions[1] / 2) +"px;" );
+		
+		var img = new Image();
+		productImage.load(function() {    // when image has loaded...
+			$(this).css('display', 'none'); // hide image by default
+			container.removeClass('loading').append(this);   // remove 'div#loader.loading' class (loading anim gif), then insert our image in 'loader' div
+			$(this).fadeIn('fast'); // fade image in
+		}).attr( "src", this.href );
+		return false;
+	});
+});
+</script>
+{% endblock %}

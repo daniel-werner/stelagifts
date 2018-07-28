@@ -1,0 +1,77 @@
+{% load i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    {% block meta %}
+    	{% ifequal LANGUAGE_CODE "hu" %}
+    		<meta name="keywords" content="mobiltok, tok, kézi készítésű, stelagifts, telefontok, ajándék, különleges ajándék, egyedi tok" />
+    	{% endifequal %}
+    	{% ifequal LANGUAGE_CODE "sr" %}
+    		<meta name="keywords" content="futrola za mobilni, futrola, ručno izrađeni, stelagifts, futrola za telefon, poklon, unikatni poklon, unikatna futrola" />
+    	{% endifequal %}
+    	{% ifequal LANGUAGE_CODE "en" %}
+    		<meta name="keywords" content="cell phone case, case, hand made, stelagifts, phone case, gifts, special gift, unique case" />
+    	{% endifequal %}    	    	
+    {% endblock %}
+    
+    <!-- 
+    	Developed by: Daniel Verner
+    	Email: vernerd@gmail.com
+    	2011
+    -->
+    
+    <title>
+    	{% block pagetitle %}{% endblock %} &mdash; Stelagifts
+    </title>
+    {% block links-scripts %}
+    {% endblock %}
+	{% load assets %}
+	{% assets filter="cssmin", output="css/packed.css", "css/reset.css", "css/text.css", "css/960.css", "css/main.css" %}
+    	<link rel="stylesheet" href="{{ ASSET_URL }}" type="text/css" />
+	{% endassets %}
+    {% if false %}
+	    <link rel="stylesheet" href="{{ MEDIA_URL }}css/reset.css" type="text/css" />
+	    <link rel="stylesheet" href="{{ MEDIA_URL }}css/text.css" type="text/css" />
+	    <link rel="stylesheet" href="{{ MEDIA_URL }}css/960.css" type="text/css" />
+	    <link rel="stylesheet" href="{{ MEDIA_URL }}css/main.css" type="text/css" />
+    {% endif %}
+    <script src="http://static.getclicky.com/js" type="text/javascript"></script>
+	<script type="text/javascript">try{ clicky.init(66373748); }catch(err){}</script>
+	
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-20783613-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>	
+  <!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="{{ MEDIA_URL }}css/main-ie6.css" /><![endif]-->  
+  <!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="{{ MEDIA_URL }}css/main-ie7.css" /><![endif]-->
+  </head>
+
+	{% block body %}  
+    <body id="home">
+	{% endblock %} 
+		{% include "header.html" %}
+
+		{% block banner %}
+			{% include "banner.html" %}
+		{% endblock %}
+      
+		{% block content %}<p>Content goes here...</p>{% endblock %}
+
+    <div class="clear"></div>
+
+      {% include "footer.html" %}
+
+	{#{% include "debug.html" %}#}
+    </body>
+</html>

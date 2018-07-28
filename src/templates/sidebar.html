@@ -1,0 +1,21 @@
+{% load i18n %}
+
+	<div class="sidebar">
+		{% for box_content in data %}
+			<div class="sidebar-box">
+				<h3>{% trans "Products" %}</h3>	
+				<div class="sidebar-box-inner">
+					<ul>
+					{% for item in box_content.1 %}							
+						<li>
+							<a href="{% url products.views.details item.id item.name|slugify %}">{{item}}</a>
+							{% if forloop.last != 1 %}
+								<hr />
+							{% endif %}
+						</li>
+					{%endfor %}
+					</ul>
+				</div>
+			</div>
+		{% endfor %}
+	</div>

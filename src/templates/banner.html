@@ -1,0 +1,14 @@
+{% load i18n %}
+<div id="banner-top" class="container_16">
+  <div id="banner-top-background">
+    <img id="banner-img" src="{{ MEDIA_URL }}img/banner-1.jpg" alt="banner1" />
+  </div>    
+  <div id="banner-top-text" class="grid_8">
+    <h1 class="banner-top" >{% trans "Get Your Favourite Handcrafted Gifts" %}</h1>
+    <p class="banner-top">{% trans "Choose from the cell phone cases or other gifts, place your order and your customized handcrafted gift will be done soon." %}</p>
+    <!--Válassz egyet a mobiltokok vagy a többi ajándék közül, add le a rendelésed és máris készül a testreszabott kézi készitésű ajéndékod!-->
+    <a href="{% url multilingual.flatpages.views.multilingual_flatpage url="contact" %}" class="order-button" rel="nofollow">
+      {% trans "Order now" %}
+    </a>
+  </div>
+</div>

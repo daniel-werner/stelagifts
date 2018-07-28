@@ -1,0 +1,16 @@
+	<div class="breadcrumb grid_9">
+		<ul>
+			{% for breadcrumb in request.breadcrumbs %}
+			<li>
+				{% if not forloop.last %}		
+ 					<a href="{{ breadcrumb.url }}">{{ breadcrumb.name }}</a>
+ 				{% else %}
+ 					<p>{{ breadcrumb.name }}</p>
+				{% endif %}
+			{% if not forloop.last %} <span>»</span> {% endif %}
+ 			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	
+	<div class="clear"></div>

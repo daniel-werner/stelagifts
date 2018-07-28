@@ -1,0 +1,23 @@
+{% extends "products/list.html" %}
+{% load i18n %}
+{% block pagetitle %}
+	Tags
+{% endblock %}
+
+	{% block product_list_head %}
+	<div class="product-list-head">
+		<div class="product-list-desc grid_9">
+			<h2>{% trans "Available products for" %}: {{tag}}</h2>
+			<p>{% blocktrans %}You can find here products which are available for your {{tag}}{% endblocktrans %}</p>
+		</div>
+		<div id="category-select" class="grid_6 omega">
+			<a class="facebook-small" href="http://www.facebook.com/#!/profile.php?id=100001701055234" target="_blank"></a>
+			<div class="clear"></div>
+			<!--<p class="omega">Categories:</p>-->
+			<select class="omega">
+				<option>{% trans "Cell phone cases" %}</option>
+			</select>
+		</div>
+		<hr class="main"/>
+	</div>
+	{% endblock %}
