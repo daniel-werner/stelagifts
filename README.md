@@ -1,5 +1,5 @@
 # Stelagifts
-Website for my wife's handcrafted gifts written in Django.
+Website written in Django for my wife's handcrafted gifts.
 
 ## Introduction
 Multilingual website written in python using Django, to explore the
